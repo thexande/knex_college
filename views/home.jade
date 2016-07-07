@@ -1,0 +1,10 @@
+extends layout
+block content
+	.container
+		.jumbotron
+			h1 Welcome to cities of the world!
+			p add a city, add a country, or just view existing data!
+			.btn-group
+				a.btn.btn-secondary.btn-default(href="/countries") View all Countries
+				a.btn.btn-secondary.btn-success(href="/newCity") Create New City
+				//- a.btn.btn-secondary.btn-success(href="#") Create New Country

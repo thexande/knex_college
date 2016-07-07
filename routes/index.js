@@ -3,6 +3,16 @@ var router = express.Router();
 var knex = require('../db/knex');
 
 /* GET home page. */
+router.get('/', (req, res, next) => {
+  res.render('home')
+})
+router.route('/newCity')
+  .get((req, res, next) => {
+    res.render('newCity')
+  })
+  .post((req, res, next) => {
+    console.log(req.body);
+  })
 router.get('/countries', function(req, res, next) {
   knex('country').then((countries) => {
     res.render('table', {countries: countries});

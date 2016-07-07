@@ -1,0 +1,11 @@
+extends layout
+block content
+	table.table.table-striped.table-hover#data_table
+		thead
+			each val, index in countries[0]
+				th= index
+		tbody
+			each country in countries
+				tr
+					each val2, index2 in countries[0]
+						td= country[index2]
